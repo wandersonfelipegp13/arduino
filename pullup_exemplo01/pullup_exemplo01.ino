@@ -1,3 +1,5 @@
+int i;
+
 void setup() {
   pinMode(7, INPUT_PULLUP);
   pinMode(8, OUTPUT);
@@ -8,25 +10,19 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(9, HIGH);
-  delay(750);
-  digitalWrite(9, LOW);
 
-  digitalWrite(10, HIGH);
-  delay(750);
-  digitalWrite(10, LOW);
+  i = 9;
 
-  digitalWrite(11, HIGH);
-  delay(750);
-  digitalWrite(11, LOW);
+  while (i <= 12) {
+    digitalWrite(i, HIGH);
+    delay(150);
+    digitalWrite(i, LOW);
+    i++;
+  }
 
-  digitalWrite(12, HIGH);
-  delay(750);
-  digitalWrite(12, LOW);
-
-  if (digitalRead(7) == LOW) {
+  if (pulseIn(7, HIGH) < 50) {
     digitalWrite(8, HIGH);
-    delay(750);
+    delay(150);
     digitalWrite(8, LOW);
   }
 }
