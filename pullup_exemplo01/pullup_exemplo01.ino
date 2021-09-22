@@ -20,9 +20,11 @@ void loop() {
     i++;
   }
 
-  if (pulseIn(7, HIGH) < 50) {
-    digitalWrite(8, HIGH);
+  while (i >= 9) {
+    digitalWrite(i, HIGH);
     delay(150);
-    digitalWrite(8, LOW);
+    digitalWrite(i, LOW);
+    i--;
   }
+
 }
