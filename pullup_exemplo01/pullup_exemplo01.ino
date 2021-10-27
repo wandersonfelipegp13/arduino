@@ -3,7 +3,7 @@ int i;
 void setup() {
   pinMode(7, INPUT_PULLUP);
   pinMode(8, OUTPUT);
-  pinMode(9, OUTPUT);
+  pinMode(8, OUTPUT);
   pinMode(10, OUTPUT);
   pinMode(11, OUTPUT);
   pinMode(12, OUTPUT);
